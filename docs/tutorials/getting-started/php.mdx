@@ -138,7 +138,7 @@ Route::get('/hello', function () {
 +         )
 +     ]));
     $client = $api->getClient();
-    if(client->getBooleanValue("welcome-message", false)){
+    if($client->getBooleanValue("welcome-message", false)){
         return response()->json(['message' => 'Hello, World! open feature']);
     }
     return response()->json(['message' => 'Hello, World!']);
